@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  rust:
+    container_name: wasm_game
+    build: .
+    tty: true
+    volumes:
+      - .:/workspace
+    ports:
+      - "127.0.0.1:6666:8080"
